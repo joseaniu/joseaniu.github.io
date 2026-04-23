@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 3 - Жозе Вонтаде Мартинш</title>
+    <title>Резюме - Жозе Вонтаде Мартинш</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         
-        <!-- ==========================================
-             ЗАДАНИЕ 1: Интерактивные функции (Calculadora)
-             ========================================== -->
+        <!-- ЗАДАНИЕ 1 -->
         <section class="task-card">
             <h2>Индивидуальное задание 1</h2>
             <p class="task-subtitle">Реализация функций: min(a,b), max(a,b), equal(a,b)</p>
 
-            <!-- 1. Минимум -->
             <div class="task-row">
-                <h3>1. Нахождение минимума двух чисел (min)</h3>
+                <h3>1. Нахождение минимума (min)</h3>
                 <div class="input-group">
                     <input type="number" id="min-a" value="-2">
                     <input type="number" id="min-b" value="2">
@@ -27,9 +24,8 @@
                 <div class="result-box" id="min-result">min(-2, 2) = -2</div>
             </div>
 
-            <!-- 2. Максимум -->
             <div class="task-row">
-                <h3>2. Нахождение максимума двух чисел (max)</h3>
+                <h3>2. Нахождение максимума (max)</h3>
                 <div class="input-group">
                     <input type="number" id="max-a" value="312">
                     <input type="number" id="max-b" value="3">
@@ -38,82 +34,70 @@
                 <div class="result-box" id="max-result">max(312, 3) = 312</div>
             </div>
 
-            <!-- 3. Равенство -->
             <div class="task-row">
-                <h3>3. Проверка на равенство двух чисел (equal)</h3>
+                <h3>3. Проверка равенства (equal)</h3>
                 <div class="input-group">
                     <input type="number" id="equal-a" value="13">
                     <input type="number" id="equal-b" value="31">
                     <button class="btn-blue" onclick="checkEqual()">Проверить равенство</button>
                 </div>
-                <div class="result-box result-error" id="equal-result">equal(13, 31) = false ❌ (числа не равны)</div>
+                <div class="result-box result-error" id="equal-result">equal(13, 31) = false ❌</div>
             </div>
         </section>
 
-        <!-- ==========================================
-             ЗАДАНИЕ 2: Переменные (Prompt & Alert)
-             ========================================== -->
+        <!-- ЗАДАНИЕ 2 -->
         <section class="task-card">
             <h2>Индивидуальное задание 2</h2>
-            <p class="task-subtitle">Объявление переменных и работа с ними</p>
-            <button class="btn-green" onclick="runAssignment2()" style="width: 100%; padding: 12px; font-size: 16px;">
-                Запустить задание 2
-            </button>
+            <button class="btn-green" onclick="runAssignment2()">Запустить задание 2</button>
         </section>
 
-        <!-- ==========================================
-             ЗАДАНИЕ 3: Проверка возраста (Loop)
-             ========================================== -->
+        <!-- ЗАДАНИЕ 3 -->
         <section class="task-card">
             <h2>Индивидуальное задание 3</h2>
-            <p class="task-subtitle">Скрипт запрашивает возраст и уточняет его.</p>
             <button class="btn-green" id="btn-age">Запустить опрос возраста</button>
-            <div id="age-result" class="result-box" style="margin-top: 15px;">Нажмите кнопку для запуска скрипта</div>
+            <div id="age-result" class="result-box" style="margin-top: 15px;">Нажмите кнопку</div>
         </section>
 
-        <!-- Шапка резюме -->
-        <header class="header">
-            <img src="https://i.pravatar.cc/150?img=12" alt="Фото профиля" class="profile-photo">
-            <h1 id="nome-completo">Жозе Вонтаде Мартинш</h1>
-            <p class="profissao">Инженер по автоматизации</p>
-            <p class="localizacao">📍 Москва, Россия</p>
-        </header>
+        <!-- ЗАДАНИЕ 4: RESUMO -->
+        <section class="resume-section">
+            <h2>📋 Моё Резюме</h2>
+            
+            <div class="profile-header">
+                <img src="https://i.pravatar.cc/150?img=12" alt="Фото" class="profile-photo">
+                <div class="profile-info">
+                    <h1 id="full-name">Жозе Вонтаде Мартинш</h1>
+                    <p class="position">Инженер по автоматизации</p>
+                    <p class="location">📍 Москва, Россия</p>
+                </div>
+            </div>
 
-        <!-- Секция контактов -->
-        <section class="contato">
-            <h2>📞 Контакты</h2>
-            <p>📧 <span id="email">joshtoosmart@gmail.com</span></p>
-            <p>📱 <span id="telefone">+7 998 765 43 21</span></p>
+            <div class="contact-section">
+                <h3>📞 Контакты</h3>
+                <p>📧 joshtoosmart@gmail.com</p>
+                <p>📱 +7 998 765 43 21</p>
+            </div>
+
+            <div class="edit-section">
+                <h3>✏️ Редактировать фамилию</h3>
+                <input type="text" id="input-surname" placeholder="Введите новую фамилию" class="input-field">
+                <button class="btn-edit" onclick="changeSurname()">Изменить фамилию</button>
+                <button class="btn-random" onclick="changeRandomColor()">🎨 Случайный цвет фона</button>
+            </div>
+
+            <div class="skills-section">
+                <h3>💼 Навыки</h3>
+                <ul>
+                    <li>Промышленная автоматизация</li>
+                    <li>Программирование ПЛК</li>
+                    <li>Python и JavaScript</li>
+                    <li>Системы управления</li>
+                </ul>
+            </div>
         </section>
 
-        <!-- Secção de Verificação de Idade (Antiga) -->
-        <section class="idade-section">
-            <h2>🎂 Проверка возраста (Старый скрипт)</h2>
-            <button id="btn-idade" class="btn-primary">Проверить мой возраст</button>
-            <p id="resultado-idade"></p>
-        </section>
-
-        <!-- Секция редактирования -->
-        <section class="edicao">
-            <h2>✏️ Редактировать фамилию</h2>
-            <input type="text" id="input-sobrenome" placeholder="Введите новую фамилию">
-            <button id="btn-editar" class="btn-secondary">Изменить фамилию</button>
-            <button id="btn-cor" class="btn-color">🎨 Случайный цвет</button>
-            <button id="btn-reset" class="btn-reset">🔄 Сбросить цвет</button>
-        </section>
-
-        <!-- Секция навыков -->
-        <section class="habilidades">
-            <h2>💼 Навыки</h2>
-            <ul>
-                <li>Промышленная автоматизация</li>
-                <li>Программирование ПЛК</li>
-                <li>Python и JavaScript</li>
-                <li>Системы управления</li>
-            </ul>
-        </section>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
